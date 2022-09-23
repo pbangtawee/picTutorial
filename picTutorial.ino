@@ -1,6 +1,6 @@
-#include "SPI.h"
+#include <SPI.h>
 #include <Adafruit_ILI9341.h>
-#include "arduino.c"
+#include "picture.h"
 
 #define TFT_DC 10
 #define TFT_CS 9
@@ -14,6 +14,8 @@ void setup() {
 
 void loop() {
   tft.fillScreen(ILI9341_BLACK);
-  tft.drawRGBBitmap(0, 0, arduino_uno, 240, 240);
+  tft.drawRGBBitmap(0, 0, board, 100, 100);
   delay(5000);
 }
+
+
